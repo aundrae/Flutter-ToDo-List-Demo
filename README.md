@@ -1,3 +1,3 @@
 # ToDo List Demo Application
 
-<img src="/assets/Demo GIf.gif">
+<img src="/assets/Demo Gif.gif">
