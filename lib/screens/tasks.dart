@@ -27,7 +27,7 @@ class _TasksState extends State<Tasks> {
       MaterialPageRoute(builder: (context) => const AddTask()),
     );
 
-    // After the Selection Screen returns a result, hide any previous snackbars
+    // After the Add Task returns a result, hide any previous snackbars
     // and show the new result.
     if (result != null) {
       setState(() {
@@ -46,7 +46,7 @@ class _TasksState extends State<Tasks> {
       appBar: AppBar(
         title: Text(widget.title),
       ),
-      body: items.length > 0
+      body: items.isNotEmpty
           ? ListView.builder(
               itemCount: items.length,
               itemBuilder: (context, index) {
