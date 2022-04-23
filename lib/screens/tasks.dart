@@ -55,7 +55,7 @@ class _TasksState extends State<Tasks> {
                 return Dismissible(
                   // Each Dismissible must contain a Key. Keys allow Flutter to
                   // uniquely identify widgets.
-                  key: Key(item["title"]),
+                  key: Key('$item["title"]-$index}'),
                   // Function used to remove item from list.
                   onDismissed: (direction) {
                     // Remove the item from the data source.
