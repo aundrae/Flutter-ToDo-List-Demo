@@ -8,6 +8,7 @@ class AddTask extends StatefulWidget {
 }
 
 class _AddTaskState extends State<AddTask> {
+  //Variables used to hold title and description
   String title="";
   String description="";
   @override
@@ -21,6 +22,7 @@ class _AddTaskState extends State<AddTask> {
           crossAxisAlignment: CrossAxisAlignment.center,
           mainAxisAlignment: MainAxisAlignment.center,
           children: <Widget>[
+            //1 way to handle input field
             TextFormField(
               onChanged: (text){
                 setState(() {
@@ -33,7 +35,9 @@ class _AddTaskState extends State<AddTask> {
                 border: OutlineInputBorder(),
               ),
             ),
+            //Used to make space
             const SizedBox(height: 10),
+            //Used to handle multiple line description
             TextField(
               keyboardType: TextInputType.multiline,
               maxLines: 10,
@@ -47,13 +51,14 @@ class _AddTaskState extends State<AddTask> {
                 });
               },
             ),
+            //Used to make space
             const SizedBox(height: 10),
+            //Used to submit the data to next screen
             ElevatedButton(
               style: ElevatedButton.styleFrom(
                 minimumSize: const Size.fromHeight(40), // fromHeight use double.infinity as width and 40 is the height
               ),
               onPressed: () {
-                // Close the screen and return "Nope." as the result.
                 Navigator.pop(context, jsonEncode({"title": title, "description": description}));
               },
               child: const Text('Submit'),

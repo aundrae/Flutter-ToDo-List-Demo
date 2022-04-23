@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-
+//Create custom widget
 class CardWidget extends StatefulWidget {
   const CardWidget({Key? key, required this.title, required this.description}) : super(key: key);
 
