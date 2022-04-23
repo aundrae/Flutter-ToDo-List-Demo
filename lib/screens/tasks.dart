@@ -2,7 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:untitled/screens/add_task.dart';
 import 'package:untitled/components/card.dart';
 import 'dart:convert';
-
+//View and remove tasks list
 class Tasks extends StatefulWidget {
   const Tasks({Key? key, required this.title}) : super(key: key);
 
